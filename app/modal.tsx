@@ -1,28 +1,24 @@
-import { Platform, StyleSheet, Text, View } from "react-native"
+import { Platform, Text, View } from "react-native"
 import { StatusBar } from "expo-status-bar"
+import { createStyleSheet, useStyles } from "react-native-unistyles"
 
 export default function ModalScreen() {
+  const { styles } = useStyles(stylesheet)
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Modal</Text>
+      <Text style={styles.text}>Modal</Text>
       <StatusBar style={Platform.OS === "ios" ? "light" : "auto"} />
     </View>
   )
 }
 
-const styles = StyleSheet.create({
+const stylesheet = createStyleSheet((theme) => ({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: theme.colors.backgroundPrimary,
   },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
+  text: {
+    color: theme.colors.textPrimary,
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: "80%",
-  },
-})
+}))
