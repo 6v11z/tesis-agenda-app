@@ -1,7 +1,8 @@
 export const lightTheme = {
   colors: {
-    typography: "#000000",
-    background: "#ffffff",
+    backgroundPrimary: "#ffffff",
+    backgroundSecondary: "#f6f6f6",
+    textPrimary: "#000000",
   },
   margins: {
     sm: 2,
@@ -13,8 +14,9 @@ export const lightTheme = {
 
 export const darkTheme = {
   colors: {
-    typography: "#ffffff",
-    background: "#000000",
+    backgroundPrimary: "#161616",
+    backgroundSecondary: "#1c1c1c",
+    textPrimary: "#f6f6f6",
   },
   margins: {
     sm: 2,
