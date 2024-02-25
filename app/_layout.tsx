@@ -1,4 +1,5 @@
 import { Stack } from "expo-router"
+import "@/style/unistyles"
 
 const RootLayout = () => {
   return (
