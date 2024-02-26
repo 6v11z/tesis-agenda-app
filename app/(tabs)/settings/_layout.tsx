@@ -12,7 +12,8 @@ const SettingsLayout = () => {
       }}
     >
       <Stack.Screen name="index" options={{ title: "Ajustes" }} />
-      <Stack.Screen name="about" options={{ title: "Acerca" }} />
+      <Stack.Screen name="appearance" options={{ title: "Apariencia" }} />
+      <Stack.Screen name="about" options={{ title: "Acerca de" }} />
     </Stack>
   )
 }
