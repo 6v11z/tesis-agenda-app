@@ -3,11 +3,13 @@ import { StatusBar } from "expo-status-bar"
 import { createStyleSheet, useStyles } from "react-native-unistyles"
 
 export default function ModalScreen() {
-  const { styles } = useStyles(stylesheet)
+  const { styles, theme } = useStyles(stylesheet)
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Modal</Text>
+    <View style={theme.components.container}>
+      <View>
+        <Text style={styles.text}>Empleado</Text>
+      </View>
       <StatusBar style={Platform.OS === "ios" ? "light" : "auto"} />
     </View>
   )

@@ -1,12 +1,15 @@
-import { Text, View } from "react-native"
+import { View } from "react-native"
 import { createStyleSheet, useStyles } from "react-native-unistyles"
+import ReservationItem from "@/components/reservation-item"
 
 const HomeScreen = () => {
-  const { styles, theme } = useStyles(stylesheet)
+  const { theme } = useStyles(stylesheet)
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Home</Text>
+    <View style={theme.components.container}>
+      <ReservationItem />
+      <ReservationItem />
+      <ReservationItem />
     </View>
   )
 }
@@ -16,9 +19,6 @@ const stylesheet = createStyleSheet((theme) => ({
     flex: 1,
     backgroundColor: theme.colors.backgroundPrimary,
     padding: 10,
-  },
-  text: {
-    color: theme.colors.textPrimary,
   },
 }))
 

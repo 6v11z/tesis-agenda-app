@@ -3,17 +3,18 @@ import { Link } from "expo-router"
 import { createStyleSheet, useStyles } from "react-native-unistyles"
 
 const SettingsScreen = () => {
-  const { styles } = useStyles(stylesheet)
+  const { styles, theme } = useStyles(stylesheet)
 
   return (
-    <View style={styles.container}>
+    <View style={theme.components.container}>
       <View style={styles.group}>
         <Link href="/settings/about" asChild style={styles.groupItem}>
           <Pressable>
             <Text style={styles.text}>Notifications and Sounds</Text>
           </Pressable>
         </Link>
-        <Link href="/settings/about" asChild style={styles.groupItem}>
+        <View style={styles.divider}></View>
+        <Link href="/settings/appearance" asChild style={styles.groupItem}>
           <Pressable>
             <Text style={styles.text}>Appearance</Text>
           </Pressable>
@@ -22,7 +23,7 @@ const SettingsScreen = () => {
       <View style={styles.group}>
         <Link href="/settings/about" asChild style={styles.groupItem}>
           <Pressable>
-            <Text style={styles.text}>About</Text>
+            <Text style={styles.text}>Acerca de</Text>
           </Pressable>
         </Link>
       </View>
@@ -31,18 +32,16 @@ const SettingsScreen = () => {
 }
 
 const stylesheet = createStyleSheet((theme) => ({
-  container: {
-    flex: 1,
-    backgroundColor: theme.colors.backgroundPrimary,
-    padding: 10,
-    gap: 20,
-  },
   group: {
     backgroundColor: theme.colors.backgroundSecondary,
-    borderRadius: 10,
+    borderRadius: theme.radius.sm,
   },
   groupItem: {
     padding: 10,
+  },
+  divider: {
+    borderBottomWidth: 1,
+    borderBottomColor: theme.colors.border,
   },
   text: {
     color: theme.colors.textPrimary,
