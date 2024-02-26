@@ -25,6 +25,7 @@ export const lightTheme = {
       flex: 1,
       backgroundColor: lightColors.backgroundPrimary,
       padding: 10,
+      gap: 10,
     },
     textPrimary: {
       color: lightColors.textPrimary,
@@ -53,6 +54,7 @@ export const darkTheme = {
       flex: 1,
       backgroundColor: darkColors.backgroundPrimary,
       padding: 10,
+      gap: 10,
     },
     textPrimary: {
       color: darkColors.textPrimary,
