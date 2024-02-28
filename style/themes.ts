@@ -27,6 +27,13 @@ export const lightTheme = {
       padding: 10,
       gap: 10,
     },
+    button: {
+      danger: {
+        backgroundColor: "#e5484d",
+        borderRadius: 5,
+        padding: 10,
+      },
+    },
     textPrimary: {
       color: lightColors.textPrimary,
     },
@@ -55,6 +62,13 @@ export const darkTheme = {
       backgroundColor: darkColors.backgroundPrimary,
       padding: 10,
       gap: 10,
+    },
+    button: {
+      danger: {
+        backgroundColor: "#e5484d",
+        borderRadius: 5,
+        padding: 10,
+      },
     },
     textPrimary: {
       color: darkColors.textPrimary,
