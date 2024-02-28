@@ -20,6 +20,7 @@ const SettingsScreen = () => {
           </Pressable>
         </Link>
       </View>
+
       <View style={styles.group}>
         <Link href="/settings/about" asChild style={styles.groupItem}>
           <Pressable>
@@ -27,6 +28,10 @@ const SettingsScreen = () => {
           </Pressable>
         </Link>
       </View>
+
+      <Pressable style={theme.components.button.danger}>
+        <Text style={{ color: "white" }}>Sign Out</Text>
+      </Pressable>
     </View>
   )
 }
