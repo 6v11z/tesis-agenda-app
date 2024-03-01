@@ -1,4 +1,6 @@
 const lightColors = {
+  primary: "#0090ff",
+  danger: "#e5484d",
   backgroundPrimary: "#ffffff",
   backgroundSecondary: "#f6f6f6",
   textPrimary: "#000000",
@@ -8,6 +10,8 @@ const lightColors = {
 } as const
 
 const darkColors = {
+  primary: "#0090ff",
+  danger: "#e5484d",
   backgroundPrimary: "#161616",
   backgroundSecondary: "#1c1c1c",
   textPrimary: "#f6f6f6",
@@ -24,12 +28,12 @@ export const lightTheme = {
     container: {
       flex: 1,
       backgroundColor: lightColors.backgroundPrimary,
-      padding: 10,
+      padding: 20,
       gap: 10,
     },
     button: {
       danger: {
-        backgroundColor: "#e5484d",
+        backgroundColor: lightColors.danger,
         borderRadius: 5,
         padding: 10,
       },
@@ -60,12 +64,17 @@ export const darkTheme = {
     container: {
       flex: 1,
       backgroundColor: darkColors.backgroundPrimary,
-      padding: 10,
+      padding: 20,
       gap: 10,
     },
     button: {
+      primary: {
+        backroundColor: darkColors.primary,
+        borderRadius: 5,
+        padding: 10,
+      },
       danger: {
-        backgroundColor: "#e5484d",
+        backgroundColor: darkColors.danger,
         borderRadius: 5,
         padding: 10,
       },
