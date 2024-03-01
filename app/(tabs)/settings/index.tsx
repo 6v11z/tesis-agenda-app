@@ -1,9 +1,11 @@
 import { Pressable, Text, View } from "react-native"
 import { Link } from "expo-router"
 import { createStyleSheet, useStyles } from "react-native-unistyles"
+import { useAuth } from "@/provider/AuthProvider"
 
 const SettingsScreen = () => {
   const { styles, theme } = useStyles(stylesheet)
+  const { signOut } = useAuth()
 
   return (
     <View style={theme.components.container}>
@@ -29,7 +31,7 @@ const SettingsScreen = () => {
         </Link>
       </View>
 
-      <Pressable style={theme.components.button.danger}>
+      <Pressable style={theme.components.button.danger} onPress={signOut}>
         <Text style={{ color: "white" }}>Sign Out</Text>
       </Pressable>
     </View>
