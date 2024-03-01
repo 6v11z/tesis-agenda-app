@@ -28,7 +28,7 @@ export const lightTheme = {
     container: {
       flex: 1,
       backgroundColor: lightColors.backgroundPrimary,
-      padding: 20,
+      padding: 10,
       gap: 10,
     },
     button: {
@@ -64,7 +64,7 @@ export const darkTheme = {
     container: {
       flex: 1,
       backgroundColor: darkColors.backgroundPrimary,
-      padding: 20,
+      padding: 10,
       gap: 10,
     },
     button: {
