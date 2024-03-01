@@ -1,30 +1,31 @@
-import { Stack } from "expo-router"
-import { createStyleSheet, useStyles } from "react-native-unistyles"
-import "@/style/unistyles"
+import { AuthProvider, useAuth } from "../provider/AuthProvider"
+import { Slot, useRouter } from "expo-router"
+import { useEffect } from "react"
+import "../style/unistyles"
 
-const RootLayout = () => {
-  const { styles, theme } = useStyles(stylesheet)
+const InitialLayout = () => {
+  const { session, initialized } = useAuth()
+  const router = useRouter()
 
-  return (
-    <Stack
-      screenOptions={{
-        headerStyle: styles.header,
-        headerTintColor: theme.colors.textPrimary,
-      }}
-    >
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen
-        name="modal"
-        options={{ title: "Nueva Reserva", presentation: "modal" }}
-      />
-    </Stack>
-  )
+  useEffect(() => {
+    if (!initialized) return
+
+    if (session) {
+      router.replace("/(tabs)/")
+    } else if (!session) {
+      router.replace("/(auth)/")
+    }
+  }, [session, initialized])
+
+  return <Slot />
 }
 
-const stylesheet = createStyleSheet((theme) => ({
-  header: {
-    backgroundColor: theme.colors.backgroundPrimary,
-  },
-}))
+const RootLayout = () => {
+  return (
+    <AuthProvider>
+      <InitialLayout />
+    </AuthProvider>
+  )
+}
 
 export default RootLayout
