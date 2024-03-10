@@ -1,5 +1,5 @@
 const lightColors = {
-  primary: "#0090ff",
+  primary: "#C2E5FF",
   danger: "#e5484d",
   backgroundPrimary: "#ffffff",
   backgroundSecondary: "#f6f6f6",
@@ -10,7 +10,7 @@ const lightColors = {
 } as const
 
 const darkColors = {
-  primary: "#0090ff",
+  primary: "#004074",
   danger: "#e5484d",
   backgroundPrimary: "#161616",
   backgroundSecondary: "#1c1c1c",
@@ -68,11 +68,6 @@ export const darkTheme = {
       gap: 10,
     },
     button: {
-      primary: {
-        backroundColor: darkColors.primary,
-        borderRadius: 5,
-        padding: 10,
-      },
       danger: {
         backgroundColor: darkColors.danger,
         borderRadius: 5,
