@@ -11,7 +11,7 @@ const InitialLayout = () => {
     if (!initialized) return
 
     if (session) {
-      router.replace("/(tabs)/")
+      router.replace("/(app)/(tabs)/")
     } else if (!session) {
       router.replace("/(auth)/")
     }
