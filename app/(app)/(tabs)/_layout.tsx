@@ -20,7 +20,7 @@ const TabsLayout = () => {
         options={{
           title: "Inicio",
           headerRight: () => (
-            <Link href="/modal" asChild>
+            <Link href="/(app)/modal" asChild>
               <Pressable>
                 <AntDesign name="plus" size={24} style={styles.headerRight} />
               </Pressable>
